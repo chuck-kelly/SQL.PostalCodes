@@ -1,0 +1,1 @@
+SELECT distinct state FROM zipcodes;

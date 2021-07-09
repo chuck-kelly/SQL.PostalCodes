@@ -18,27 +18,27 @@ After this lab, you will be importing data into this database and combining the 
 ## States, Counties
 
 Write a Query that returns all the unique state names. 
-
+SELECT distinct state FROM zipcodes;
 *(Add your query to the file exercise1.sql)*
 
 
 Write a Query that returns all the Counties by State on separate lines. 
-
+SELECT state, county FROM zipcodes;
 *(Add your query to the file exercise1.sql)*
 
 
 Write a Query that returns all the Counties by state, as a concatenated string.
-
+SELECT state, GROUP_CONCAT(county SEPARATOR ', ') FROM zipcodes GROUP BY state;
 *(Add your query to the file exercise1.sql)*
 
 
 Write a Query that returns number of Counties by state.
-
+SELECT state, COUNT(county) FROM zipcodes GROUP BY state;
 *(Add your query to the file exercise1.sql)*
 
 
 Write a Query that returns all of the individual timezones. 
-
+SELECT DISTINCT timezone FROM zipcodes;
 *(Add your query to the file exercise1.sql)*
 
 **Notice anything peculiar?**
